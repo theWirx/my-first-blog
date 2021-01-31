@@ -38,3 +38,15 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def projekt(request):
+    return render(request, 'blog/projekt.html',)
+
+def subory(request):
+    return render(request, 'blog/subory.html',)
+
+def foto(request):
+    return render(request, 'blog/foto.html',)
+
+def video(request):
+    return render(request, 'blog/video.html',)

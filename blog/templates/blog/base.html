@@ -14,14 +14,31 @@
 <body>
     <div class="page-header">
         {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
         <h1><a href="/">Projekt kvapka</a></h1>
     </div>
+
+    {% load lineage %}
+    <div id="navigation">
+        <a class="{% ancestor '/home/' %} nav-link" href=/ Home />Domov</a>
+        <a class="{% ancestor '/projekt/' %} nav-link" href=/projekt />Projekt</a>
+        <a class="{% ancestor '/subory/' %} nav-link" href=/subory />Súbory</a>
+        <a class="{% ancestor '/foto/' %} nav-link" href=/foto />Fotogaléria</a>
+        <a class="{% ancestor '/video/' %} nav-link" href=/video />Videá</a>
+    </div>
+
+
+
+
+
     <div class="content container">
         <div class="row">
             <div class="col-md-8">
                 {% block content %}
+               
+                
+                
                 {% endblock %}
             </div>
         </div>
