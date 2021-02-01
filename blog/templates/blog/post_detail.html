@@ -1,5 +1,5 @@
-﻿{% extends 'blog/base.html' %}
-
+﻿{% extends 'blog/base_post.html' %}
+{% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -8,6 +8,7 @@
 
 <body>
     {% block content %}
+
     <div class="post">
         {% if post.published_date %}
         <div class="date">
@@ -19,8 +20,12 @@
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
         <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <div class="container ">
+            {{ post.text|linebreaksbr }}
+        </div>
     </div>
+
+
     {% endblock %}
 </body>
 
