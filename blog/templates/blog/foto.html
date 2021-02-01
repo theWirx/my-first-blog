@@ -1,5 +1,5 @@
 ﻿{% extends 'blog/base.html' %}
-
+{% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -10,7 +10,15 @@
 <body>
     {% block content %}
     <h1>Fotogaléria</h1>
+    <h5 class="text-uppercase text-white"> Adaptačné opatrenia</h5>
 
+    <img src="{% static "media/FOTO-003.jpg" %}" alt="foto 3" class="img-fluid" style="width: 1140px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-004.jpg" %}" alt="foto 3" class="img-fluid" style="width: 1140px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-006.jpg" %}" alt="foto 3" class="img-fluid" style="width: 1140px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-009.jpg" %}" alt="foto 3" class="img-fluid" style="width: 1140px;" />
 
 
     {% endblock %}

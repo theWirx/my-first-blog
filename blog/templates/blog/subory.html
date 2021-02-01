@@ -1,5 +1,5 @@
 ﻿{% extends 'blog/base.html' %}
-
+{% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -10,10 +10,14 @@
 
 <body>
     {% block content %}
-    <h1>Súbory</h1>
+    <br />
+    <h1>Súbory na stiahnutie</h1>
+    <a href="{% static "media/popis-vzdelavacieho-programu-kvapka.doc" %}" download>Popis vzdelávacieho programu</a>
+    <br />
+    <a href="{% static "media/kvapka-projekt.doc" %}" download>Projekt Kvapka</a>
 
 
 
-    {% endblock %}
+            {% endblock %}
 </body>
 </html>
