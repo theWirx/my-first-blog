@@ -35,11 +35,12 @@
 
     {% load lineage %}
     <div id="navigation" class="container nav nav-tabs navbar-expand-sm bg-dark navbar-dark sticky-top">
-        <a class="{% ancestor '/home/' %} nav-link" data-toggle="tab" href=/ Home />Domov</a>
-        <a class="{% ancestor '/projekt/' %} nav-link"  data-toggle="tab" href=/projekt />Projekt</a>
-        <a class="{% ancestor '/subory/' %} nav-link" data-toggle="tab" href=/subory />Súbory</a>
-        <a class="{% ancestor '/foto/' %} nav-link" data-toggle="tab" href=/foto />Fotogaléria</a>
-        <a class="{% ancestor '/video/' %} nav-link" data-toggle="tab" href=/video />Videá</a>
+        <a class="{% ancestor '/post_list_en/' %} nav-link" data-toggle="tab" href=/post_list_en />Home</a>
+        <a class="{% ancestor '/projekt_en/' %} nav-link" data-toggle="tab" href=/projekt_en />Project</a>
+        <a class="{% ancestor '/subory_en/' %} nav-link" data-toggle="tab" href=/subory_en />Files</a>
+        <a class="{% ancestor '/foto_en/' %} nav-link" data-toggle="tab" href=/foto_en />Photos</a>
+        <a class="{% ancestor '/video_en/' %} nav-link" data-toggle="tab" href=/video_en />Videos</a>
+        <a class="{% ancestor '/home/' %} nav-link " data-toggle="tab" href=/ Home /><img src="{% static "media/slovak.png" %}" style="height: 25px;" /></a>
     </div>
 
 

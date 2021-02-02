@@ -36,10 +36,11 @@
     {% load lineage %}
     <div id="navigation" class="container nav nav-tabs navbar-expand-sm bg-dark navbar-dark sticky-top">
         <a class="{% ancestor '/home/' %} nav-link" data-toggle="tab" href=/ Home />Domov</a>
-        <a class="{% ancestor '/projekt/' %} nav-link"  data-toggle="tab" href=/projekt />Projekt</a>
+        <a class="{% ancestor '/projekt/' %} nav-link" data-toggle="tab" href=/projekt />Projekt</a>
         <a class="{% ancestor '/subory/' %} nav-link" data-toggle="tab" href=/subory />Súbory</a>
         <a class="{% ancestor '/foto/' %} nav-link" data-toggle="tab" href=/foto />Fotogaléria</a>
         <a class="{% ancestor '/video/' %} nav-link" data-toggle="tab" href=/video />Videá</a>
+        <a class="{% ancestor '/english/' %} nav-link " data-toggle="tab" href=/post_list_en/ /><img src="{% static "media/english.webp" %}" style="height: 25px;" /></a>
     </div>
 
 
