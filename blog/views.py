@@ -50,3 +50,23 @@ def foto(request):
 
 def video(request):
     return render(request, 'blog/video.html',)
+
+def post_list_en(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'blog/post_list_en.html', {'posts': posts})
+
+def post_detail_en(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/post_detail_en.html', {'post': post})
+
+def projekt_en(request):
+    return render(request, 'blog/projekt_en.html',)
+
+def subory_en(request):
+    return render(request, 'blog/subory_en.html',)
+
+def foto_en(request):
+    return render(request, 'blog/foto_en.html',)
+
+def video_en(request):
+    return render(request, 'blog/video_en.html',)

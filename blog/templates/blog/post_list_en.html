@@ -1,0 +1,35 @@
+﻿{% extends 'blog/base_en.html' %}
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+
+    <title>Projekt Kvapka</title>
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Projekt Kvapka</a></h1>
+    </div>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col">
+                {% block content %}
+                {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>published: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|truncatewords:75 }}</p>
+                    <a href="{% url 'post_detail' pk=post.pk %}">Continue reading</a>
+                </div>
+                {% endfor %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

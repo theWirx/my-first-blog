@@ -1,0 +1,26 @@
+﻿{% extends 'blog/base_en.html' %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+
+<body>
+    {% block content %}
+    <h1>Photo gallery</h1>
+    <h5 class="text-uppercase text-white"></h5>
+
+    <img src="{% static "media/FOTO-003.JPG" %}" alt="foto 3" class="img-fluid" style="width: 1100px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-004.JPG" %}" alt="foto 3" class="img-fluid" style="width: 1100px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-006.JPG" %}" alt="foto 3" class="img-fluid" style="width: 1100px;" />
+    <p></p>
+    <img src="{% static "media/FOTO-009.JPG" %}" alt="foto 3" class="img-fluid" style="width: 1100px;" />
+
+
+    {% endblock %}
+</body>
+</html>

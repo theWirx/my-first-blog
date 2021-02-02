@@ -1,0 +1,23 @@
+﻿{% extends 'blog/base_en.html' %}
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+
+
+<body>
+    {% block content %}
+    <br />
+    <h1>Files to download</h1>
+    <a href="{% static "media/Description-of-the-study-programme-Kvapka.doc" %}" download>Description of the study programme Kvapka</a>
+    <br />
+    <a href="{% static "media/kvapka-projekt-en.doc" %}" download>Project Kvapka</a>
+
+
+
+            {% endblock %}
+</body>
+</html>
